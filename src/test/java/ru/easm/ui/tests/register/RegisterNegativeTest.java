@@ -6,7 +6,6 @@ import io.qameta.allure.Story;
 import io.qameta.allure.testng.Tag;
 import io.qameta.allure.testng.Tags;
 import org.testng.annotations.Test;
-import ru.easm.ui.tests.BaseTest;
 
 import static ru.easm.ui.constants.changeless.TestSuiteTags.NEGATIVE;
 
@@ -14,7 +13,7 @@ import static ru.easm.ui.constants.changeless.TestSuiteTags.NEGATIVE;
 @Feature("Функциональность регистрации")
 @Story("Регистрация пользователя")
 @Tags({@Tag(NEGATIVE)})
-public class RegisterNegativeTest extends BaseTest {
+public class RegisterNegativeTest extends RegisterTestBase {
 
     @Test(description = "Проверка отображеня сообщения о неверном ввод пароля подтверждения")
     public void verifyMismatchPasswordTest() {

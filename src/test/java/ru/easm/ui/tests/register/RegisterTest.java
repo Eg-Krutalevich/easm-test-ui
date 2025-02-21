@@ -6,7 +6,6 @@ import io.qameta.allure.Story;
 import io.qameta.allure.testng.Tag;
 import io.qameta.allure.testng.Tags;
 import org.testng.annotations.Test;
-import ru.easm.ui.tests.BaseTest;
 
 import static ru.easm.ui.constants.changeless.TestSuiteTags.POSITIVE;
 
@@ -14,7 +13,7 @@ import static ru.easm.ui.constants.changeless.TestSuiteTags.POSITIVE;
 @Feature("Функциональность регистрации")
 @Story("Регистрация пользователя")
 @Tags({@Tag(POSITIVE)})
-public class RegisterTest extends BaseTest {
+public class RegisterTest extends RegisterTestBase {
 
     @Test(description = "Проверка отображения сообщений в окне ввода кода из смс")
     public void verifyTextCodeAlertTest() {
