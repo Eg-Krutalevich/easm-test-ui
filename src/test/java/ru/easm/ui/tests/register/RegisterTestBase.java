@@ -23,27 +23,21 @@ public class RegisterTestBase extends TestBase {
 
     @Step("Проверяем наличие текста 'Ваши пароли не совпадают'")
     protected void assertMismatchPassword() {
-        assertSoftly(softAssertions -> {
-            assertEquals(getTextWithoutAllure(VALID_PASSWORD_TEXT), "Ваши пароли не совпадают",
-                    "Проверяем наличие текста 'Ваши пароли не совпадают'");
-        });
+        assertEquals(getTextWithoutAllure(VALID_PASSWORD_TEXT), "Ваши пароли не совпадают",
+                "Проверяем наличие текста 'Ваши пароли не совпадают'");
     }
 
     @Step("Проверяем наличие текста 'Пароль должен быть не менее 8 символов'")
     protected void assertInvalidLengthPassword() {
-        assertSoftly(softAssertions -> {
-            assertEquals(getTextWithoutAllure(INVALID_PASSWORD_TEXT), "Пароль должен быть не менее 8 символов",
-                    "Проверяем наличие текста 'Пароль должен быть не менее 8 символов'");
-        });
+        assertEquals(getTextWithoutAllure(INVALID_PASSWORD_TEXT), "Пароль должен быть не менее 8 символов",
+                "Проверяем наличие текста 'Пароль должен быть не менее 8 символов'");
     }
 
     @Step("Проверяем наличие текста 'Сотовый номер должен содержать только цифры и начинаться с 7 или 8'")
     protected void assertInvalidPhone() {
-        assertSoftly(softAssertions -> {
-            assertEquals(getTextWithoutAllure(PHONE_TEXT), "Сотовый номер должен содержать " +
-                            "только цифры и начинаться с 7 или 8",
-                    "Проверяем наличие текста 'Сотовый номер должен содержать " +
-                            "только цифры и начинаться с 7 или 8'");
-        });
+        assertEquals(getTextWithoutAllure(PHONE_TEXT), "Сотовый номер должен содержать " +
+                        "только цифры и начинаться с 7 или 8",
+                "Проверяем наличие текста 'Сотовый номер должен содержать " +
+                        "только цифры и начинаться с 7 или 8'");
     }
 }
