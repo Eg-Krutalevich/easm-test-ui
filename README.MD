@@ -24,6 +24,6 @@
 
 ![results](https://github.com/Eg-Krutalevich/easm-test-ui/blob/master/images/report_1.jpg)
 
-Запросы и ответы в Allure
+Ожидаемые и фактические результаты
 
 ![request_response](https://github.com/Eg-Krutalevich/easm-test-ui/blob/master/images/report_2.jpg)
